@@ -23,6 +23,7 @@ function App() {
     <>
       {mostCommon?.length ? (
         <>
+          <img src="/tree-1.png" />
           <h1>
             The most common tree in your zipcode is: {mostCommon[0]?.common}{" "}
           </h1>{" "}

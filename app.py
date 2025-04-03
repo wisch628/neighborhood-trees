@@ -13,7 +13,6 @@ def get_tree_image(tree_name):
     if id_response.status_code == 200:
         data = id_response.json()
         search_results = data.get('query', {}).get('search', {})
-             # Get the first page's data (no loop)
         page_id = search_results[0].get('pageid', '')
         url = f"http://en.wikipedia.org/w/api.php?action=query&pageids={page_id}&prop=pageimages&format=json&pithumbsize=200"
         image_response = requests.get(url)
