@@ -5,11 +5,11 @@
 }
 
 .five-gap {
-  gap: 5px;
+  column-gap: 5px;
 }
 
 .twenty-gap {
-  gap: 20px;
+  column-gap: 20px;
 }
 
 .centered {
@@ -17,6 +17,7 @@
   min-height: 100vh;
   flex-direction: column;
   justify-content: center;
+  width: 100vw;
 }
 
 .flex-col {
@@ -28,14 +29,25 @@
 .treeWrapper {
   display: flex;
   align-items: end;
+  justify-content: center;
+
+  @media screen and (max-width: 400px) {
+    margin-top: 20px;
+  }
+}
+
+.just-desktop {
+  @media screen and (max-width: 400px) {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
 }
 
 .slideshow {
   position: relative;
   width: 100px;
-  /* or 100% */
   height: 150px;
-  /* or auto */
   overflow: hidden;
 }
 
@@ -82,17 +94,14 @@
     opacity: 1;
   }
 
-  /* Fade in */
   18% {
     opacity: 1;
   }
 
-  /* Stay fully visible */
   30% {
     opacity: 0;
   }
 
-  /* Fade out */
   100% {
     opacity: 0;
   }
@@ -109,9 +118,7 @@
 
 .tree-wrapper img {
   opacity: 0;
-  /* Initially hidden */
   visibility: hidden;
-  /* Hide the image when not hovered */
   transition: opacity 0.3s ease, visibility 0.3s ease;/
 }
 
