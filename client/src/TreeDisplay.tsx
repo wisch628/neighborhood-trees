@@ -29,7 +29,7 @@ export const TreeDisplay = ({
   return (
     <div className="flex-col">
       <Trees fullWidth={300} />
-      <h3>The most common tree in your zipcode is...</h3>
+      <h3>The most common tree in your zip code is...</h3>
       <h1>{capitalizeWords(topTree?.common)}!</h1>
       <h3>
         with <span className="tree-count">{count} trees</span>
