@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import { LandingPage } from "./LandingPage";
 
 interface TreeStats {
   count: number;
@@ -23,7 +24,6 @@ function App() {
     <>
       {mostCommon?.length ? (
         <>
-          <img src="/tree-1.png" />
           <h1>
             The most common tree in your zipcode is: {mostCommon[0]?.common}{" "}
           </h1>{" "}
@@ -39,11 +39,11 @@ function App() {
           })}
         </>
       ) : (
-        <>
-          <h1>Enter your zipcode</h1>
-          <input value={zipcode} onChange={(e) => setZipcode(e.target.value)} />
-          <button onClick={callData}>Submit</button>
-        </>
+        <LandingPage
+          zipcode={zipcode}
+          setZipcode={setZipcode}
+          callData={callData}
+        />
       )}
     </>
   );

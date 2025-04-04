@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Inter;
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 100;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -34,6 +36,24 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  text-align: center;
+  font-weight: 400;
+  margin: 0;
+}
+h3 {
+  text-align: center;
+  font-weight: 300;
+}
+
+input {
+    border-radius: 8px;
+    border: 1px solid grey;
+    padding: 10px;
+}
+input:focus,
+input:focus-visible {
+      outline-color: #6BB1AE;
+
 }
 
 button {
@@ -43,7 +63,8 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background: #6BB1AE;
+  color: white;
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -58,12 +79,10 @@ button:focus-visible {
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color: #ffffff;
+    background-color: #F5F5F5;
   }
   a:hover {
     color: #747bff;
   }
-  button {
-    background-color: #f9f9f9;
-  }
+
 }

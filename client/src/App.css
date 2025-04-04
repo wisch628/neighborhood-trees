@@ -1,0 +1,10 @@
+.flex {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.treeWrapper {
+    display: flex;
+    align-items: end;
+}
