@@ -21,7 +21,7 @@ def get_tree_image(tree_name):
             image = image_data.get('query', {}).get('pages', {}).get(str(page_id), {}).get('thumbnail', {}).get('source', '')
             return image
  
-    return ''  # Return empty string if no image is found
+    return ''
 
 @app.route('/get-nyc-data')
 def get_nyc_data():
@@ -46,12 +46,11 @@ def get_nyc_data():
                 species_counts[spc_latin] += 1
                 common_names[spc_latin] = spc_common
         
-        # Get the top 5 most common species
         top_5_species = species_counts.most_common(5)
 
-        result = [{"species": species, "count": count, "common":  common_names.get(species, ''), "image": get_tree_image(species)} for species, count in top_5_species]
+        result = [{"species": species.title(), "count": count, "common":  common_names.get(species, '').title(), "image": get_tree_image(species)} for species, count in top_5_species]
         
-        return jsonify(result)  # Return the top 5 species as a JSON response
+        return jsonify(result)
 
     else:
         return jsonify({"error": "Failed to fetch data from NYC API"}), 500

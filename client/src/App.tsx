@@ -24,10 +24,22 @@ function App() {
         setTrees(data);
         setLoading(false);
       })
-      .catch((err) => setError(err));
+      .catch((err) => {
+        console.log({ err });
+
+        setError(err);
+      });
   };
   if (loading) {
     return <Loading />;
+  }
+  if (error) {
+    return (
+      <div>
+        <h1>Error, please refresh</h1>
+        <button onClick={clearResults}>Refresh</button>
+      </div>
+    );
   }
   return (
     <>

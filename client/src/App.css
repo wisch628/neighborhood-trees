@@ -17,13 +17,15 @@
   min-height: 100vh;
   flex-direction: column;
   justify-content: center;
-  width: 100vw;
+  width: 80vw;
 }
 
 .flex-col {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 600px;
+  margin: 30px;
 }
 
 .treeWrapper {
@@ -36,7 +38,15 @@
   }
 }
 
-.just-desktop {
+.desktop {
+  @media screen and (max-width: 650px) {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
+}
+
+.tablet {
   @media screen and (max-width: 400px) {
     visibility: hidden;
     width: 0;
@@ -108,12 +118,12 @@
 }
 
 .tree-count {
-  color: #6BB1AE;
+  color: #6bb1ae;
   font-weight: 500;
 }
 
-.other-trees {
-  margin-top: 30px;
+.tree-wrapper {
+  cursor: pointer;
 }
 
 .tree-wrapper img {

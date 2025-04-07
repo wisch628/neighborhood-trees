@@ -19,7 +19,9 @@ a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
+  cursor: pointer;
 }
+
 a:hover {
   color: #535bf2;
 }
@@ -39,19 +41,22 @@ h1 {
   font-weight: 400;
   margin: 0;
 }
-h3, p {
+
+h3,
+p {
   text-align: center;
   font-weight: 300;
 }
 
 input {
-    border-radius: 8px;
-    border: 1px solid grey;
-    padding: 10px;
+  border-radius: 8px;
+  border: 1px solid grey;
+  padding: 10px;
 }
+
 input:focus,
 input:focus-visible {
-      outline-color: #6BB1AE;
+  outline-color: #6BB1AE;
 
 }
 
@@ -67,19 +72,29 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
+figcaption {
+  max-width: 300px;
+  font-weight: 200;
+  font-size: smaller;
+}
+
 
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #F5F5F5;
   }
+
   a:hover {
     color: #747bff;
   }
