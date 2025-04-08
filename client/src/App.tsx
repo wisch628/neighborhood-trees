@@ -18,7 +18,10 @@ function App() {
 
   const callData = () => {
     setLoading(true);
-    fetch(`${import.meta.env.VITE_SOME_KEY}/get-nyc-data?postcode=${zipcode}`)
+    const url = `${
+      import.meta.env.VITE_API_BASE_URL
+    }/get-nyc-data?postcode=${zipcode}`;
+    fetch(url)
       .then((response) => response.json())
       .then((data) => {
         setTrees(data);

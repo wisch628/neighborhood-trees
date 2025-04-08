@@ -54,6 +54,6 @@ def get_nyc_data():
 
     else:
         return jsonify({"error": "Failed to fetch data from NYC API"}), 500
-
-if __name__ == '__main__':
-    app.run(debug=True)
+@app.route('/')
+def test():
+    return 'Testing123'
