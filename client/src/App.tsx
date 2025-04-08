@@ -18,7 +18,7 @@ function App() {
 
   const callData = () => {
     setLoading(true);
-    fetch(`http://127.0.0.1:5000/get-nyc-data?postcode=${zipcode}`)
+    fetch(`${import.meta.env.VITE_SOME_KEY}/get-nyc-data?postcode=${zipcode}`)
       .then((response) => response.json())
       .then((data) => {
         setTrees(data);
