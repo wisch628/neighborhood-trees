@@ -4,7 +4,7 @@ import requests
 from collections import Counter
 
 app = Flask(__name__)
-CORS(app, origins=["http://localhost:5173", "https://neighborhood-trees.vercel.app/"])
+CORS(app, origins=["http://localhost:5173", "https://neighborhood-trees.vercel.app"])
 
 def get_tree_image(tree_name):
     fetch_page_id = f"https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch={tree_name}&utf8=&format=json"
