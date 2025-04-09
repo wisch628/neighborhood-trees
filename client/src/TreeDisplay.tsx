@@ -41,7 +41,7 @@ export const TreeDisplay = ({
         {selectedTree.species}, better known as {selectedTree.common}
       </figcaption>
       <h3>
-        Click on the tree name to see a photo of it generated from the Wikipedia
+        Click on the tree name to see a photo of it generated from the Perenual
         API, or <a onClick={clearResults}>try a new zip code.</a>
       </h3>
     </div>

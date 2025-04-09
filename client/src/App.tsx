@@ -24,7 +24,7 @@ function App() {
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
-        setTrees(data);
+        setTrees(data.top_5);
         setLoading(false);
       })
       .catch((err) => {
